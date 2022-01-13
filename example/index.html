@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <label for="data">Type data to sort comma separated:<br></label>
+    <input type="text" id="data" value="5,3,2,0,1,4"/><br><br>
+    <button type="button" onclick="notSort()">NothingSort</button><br><br>
+    <label for="result">Result:<br></label>
+    <textarea id="result" disabled="disabled"></textarea>
+</div>
+<script src="../dist/nothing-sort.js"></script>
+<script>
+function notSort() {
+    const result = document.getElementById('result')
+    const inputData = document.getElementById('data')
+    let dataToNotSort = inputData.value.split(',')
+    if (!(dataToNotSort instanceof Array)) {
+        result.innerText = 'Invalid input data. Insert numbers separated by comma.'
+        return
+    }
+
+    let nothingSort = new NothingSort()
+    let unsortedData = nothingSort.notSort(dataToNotSort)
+
+    result.value = ''
+    for (let i = 0; i < unsortedData.length; i++) {
+        if (i > 0) {
+            result.value = result.value + ','
+        }
+
+        result.value = result.value + unsortedData[i]
+    }
+}
+</script>
+</body>
+</html>

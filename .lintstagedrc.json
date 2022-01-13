@@ -1,0 +1,7 @@
+{
+  "*.js": [
+    "standardx --fix",
+    "npm run test",
+    "git add"
+  ]
+}

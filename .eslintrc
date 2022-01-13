@@ -1,0 +1,43 @@
+{
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2020
+    },
+    "rules": {
+        "space-before-function-paren": ["error", {
+            "anonymous": "always",
+            "named": "always",
+            "asyncArrow": "always"
+        }],
+        "no-var": "error",
+        "prefer-const": "error",
+        "quotes": [
+            "error",
+            "single",
+            {
+                "allowTemplateLiterals": true,
+                "avoidEscape": true
+            }
+        ],
+        "indent": [
+            "error",
+            4
+        ],
+        "no-extra-semi": 2,
+        "semi": [
+            1,
+            "never"
+        ],
+        "semi-spacing": [
+            1,
+            {
+                "before": false,
+                "after": true
+            }
+        ]
+    }
+}

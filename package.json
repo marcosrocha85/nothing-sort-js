@@ -1,0 +1,44 @@
+{
+  "name": "nothing-sort",
+  "version": "0.0.1",
+  "description": "Nothing-sort is an algorithm that does not sorting anything. It's worst than Bubble Sort and takes long to finish.",
+  "main": "src/nothing-sort.js",
+  "keywords": [
+    "sorting",
+    "nothing",
+    "sort",
+    "algorithm",
+    "javascript"
+  ],
+  "author": "Marcos Rocha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcosrocha85/nothing-sort-js/issues"
+  },
+  "homepage": "https://github.com/marcosrocha85/nothing-sort-js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcosrocha85/nothing-sort-js.git"
+  },
+  "watch": {
+    "build": [
+      "src/nothing-sort.js"
+    ]
+  },
+  "scripts": {
+    "watch_build": "npm-watch build",
+    "build": "browserify ./src/nothing-sort.js -o dist/nothing-sort.js && uglifyjs -m -c -o dist/nothing-sort.min.js dist/nothing-sort.js",
+    "test": "jest --env=jsdom"
+  },
+  "dependencies": {
+    "npm-watch": "^0.7.0"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "husky": "^5.0.6",
+    "jest": "^26.6.3",
+    "lint-staged": "^11.0.1",
+    "standardx": "^7.0.0",
+    "uglify-es": "^3.3.9"
+  }
+}
